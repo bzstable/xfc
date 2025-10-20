@@ -72,13 +72,13 @@ show top 15 startup news
 
 ## Features
 
-- ✅ **Semantic Understanding**: Uses embeddings, not keywords
-- ✅ **Real-time Processing**: Filters as posts load from API
-- ✅ **Batch Efficient**: Processes 30 posts at once
-- ✅ **No Server Required**: Runs entirely in-browser
-- ✅ **Persistent Filters**: Saves your preferences
-- ✅ **Top-K Control**: Choose how many posts to show
-- ✅ **Threshold Control**: Adjust sensitivity for hiding
+- **Semantic Understanding**: Uses embeddings, not keywords
+- **Real-time Processing**: Filters as posts load from API
+- **Batch Efficient**: Processes 30 posts at once
+- **No Server Required**: Runs entirely in-browser
+- **Persistent Filters**: Saves your preferences
+- **Top-K Control**: Choose how many posts to show
+- **Threshold Control**: Adjust sensitivity for hiding
 
 ## Performance
 

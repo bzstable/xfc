@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "X Feed Curator",
+  "version": "2.0",
+  "description": "Embedding-based semantic feed filtering for X using cosine similarity",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [{
+    "matches": ["https://twitter.com/*", "https://x.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "X Feed Curator",
+    "default_icon": {
+      "16": "logo.jpeg",
+      "32": "logo.jpeg",
+      "48": "logo.jpeg",
+      "128": "logo.jpeg"
+    }
+  },
+  "icons": {
+    "16": "logo.jpeg",
+    "32": "logo.jpeg",
+    "48": "logo.jpeg",
+    "128": "logo.jpeg"
+  },
+  "web_accessible_resources": [{
+    "resources": ["*"],
+    "matches": ["https://twitter.com/*", "https://x.com/*"]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Feed Curator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <img id="logo-img" src="logo.jepg" alt="X Feed Curator" class="logo-img">
+      <h1 class="title">X Feed Curator</h1>
+      <div class="subtitle">AI-powered feed filtering</div>
+    </header>
+
+    <!-- Model Status -->
+    <section class="model-status-section">
+      <div id="model-status" class="model-status unknown">Initializing...</div>
+    </section>
+
+    <!-- Status / Toggle -->
+    <section class="status-toggle">
+      <label class="switch">
+        <input id="toggle-enabled" type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <div id="status-text" class="status-text">Filtering active</div>
+      <div id="hidden-count" class="status-subtext">0 posts hidden</div>
+    </section>
+
+    <!-- Input Section -->
+    <section class="input-section">
+      <input 
+        type="text" 
+        id="filter-input" 
+        class="filter-input" 
+        placeholder="e.g., hide sports or only tech"
+        autocomplete="off"
+      >
+      <button id="add-filter" class="primary-button">Add Filter</button>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+      <button class="chip" data-cmd="hide sports posts">Hide Sports</button>
+      <button class="chip" data-cmd="hide political content">Hide Politics</button>
+      <button class="chip" data-cmd="show top 20 technology and AI posts">Tech Only</button>
+    </section>
+
+    <!-- Active Filters -->
+    <section class="filters-section">
+      <h2 class="section-title">Active Filters</h2>
+      <div id="filters-list" class="filters-list">
+        <div class="empty-state">No active filters</div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section class="actions-section">
+      <button id="reset-filters" class="secondary-button">Clear All</button>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
